@@ -1,9 +1,4 @@
 <html>
-<!-- 
-	足迹地图
-	by SunYunzeng
-	blog: https://sunyunzeng.com/
--->
 
 <head>
 	<meta charset="UTF-8">
@@ -13,14 +8,14 @@
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-jvectormap-2.0.5.min.js"></script>
 	<script type="text/javascript" src="js/jquery-jvectormap-cn-merc-en.js"></script>
-	<script type="text/javascript" src="/js/index.js"></script>
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link href="css/jquery-jvectormap-2.0.5.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 
 <body>
-	<div id="map">
-		<div id="info_bar">
+	<div id="map" style="background-color:#353535" >
+		<div id="info_bar" style="display: block;">
 			<div id="info_bar_paper">
 				<div id="info_bar_close_btn"><svg id="info_bar_close_btn_img" style="cursor: pointer;" t="1615883535208"
 						class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -39,13 +34,14 @@
 				<div id="info_bar_photos">
 				</div>
 			</div>
-		</div>
+			</div>
 	</div>
+	
 	<div id="outerdiv">
 		<div id="innerdiv">
 			<img id="bigimg" />
 		</div>
 	</div>
+	<button>点我!</button>
 </body>
-
 </html>
