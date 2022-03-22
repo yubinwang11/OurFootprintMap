@@ -1,11 +1,3 @@
-<!--
-
-link : http://www.wujiayi.vip
-name : 吴佳轶 | WuJiaYi
-mail : hello@wujiayi.vip
-微信公众号： 吴佳轶同学 
-
--->
 
 <html>
 	<head>
@@ -29,11 +21,35 @@ mail : hello@wujiayi.vip
 
 	</head>
 <body>
-	<!--background-color: 地图背景颜色-->
-	<div id="map" style="background-color:#353535"> </div>
-	<script>
+<!--background-color: 地图背景颜色-->
+<div id="map" style="background-color:#253449"> </div>
+<script>
+	$(function(){
+		var freq = [
+                10,
+                10,
+                2,
+				1,
+				3,
+				3,
+				1,
+				1,
+				10,
+				3,
+				10,
+				1,
+				10,
+				1,
+				1,
+				2,
+				1,
+				1,
+				1,
+				1,
+				1,
+				1
+        ];
 		$('#map').vectorMap({
-
 			// 此处更改地图
 			map: 'cn_merc_en',   // 中国地图
 			//map: 'us_aea',     // 美国地图
@@ -67,7 +83,7 @@ mail : hello@wujiayi.vip
 			},
 			markerStyle: {
 		        initial: {
-		            fill: '#fd8888', // 足迹位置的填充颜色
+		            fill: '#FF8C00', // 足迹位置的填充颜色
 		            stroke: '#fff'   // 足迹位置的描边颜色
 		        },
 				hover: {
@@ -76,16 +92,45 @@ mail : hello@wujiayi.vip
 					"fill-opacity": 0.8
 				},
 		    },
+
 			markers: [ // 足迹位置
 
-				// {latLng: [经度（保留两位小数）, 纬度（保留两位小数）], name: '城市名称'},
-				// 推荐查询经纬度网站：http://www.gpsspg.com/maps.htm
+                      // {latLng: [经度（保留两位小数）, 纬度（保留两位小数）], name: '城市名称'},
+                     // 推荐查询经纬度网站：http://www.gpsspg.com/maps.htm
 
-		        {latLng: [39.90, 116.41], name: '北京'},
-		        {latLng: [31.24, 121.50], name: '上海'},
+					 {latLng: [36.05312, 113.05135],name: '山西 - 长治 - 上党区  家',},
+					 {latLng: [31.24, 121.50], name: '上海'},
+					 {latLng: [39.71755, 117.30983], name: '天津'},
+					 {latLng: [30.543894345830882, 114.41216653198242], name: '湖北 - 武汉'},
+					 {latLng: [39.90, 116.41], name: '北京'},
+					 {latLng: [31.32751, 118.8921], name: '江苏 - 南京'},
+					 {latLng: [31.52853, 120.28429], name: '江苏 - 无锡'},
+					 {latLng: [34.28823, 117.18554], name: '江苏 - 徐州'},
+					 {latLng: [34.72468, 113.6401], name: '河南 - 郑州'},
+					 {latLng: [37.94036, 112.48699], name: '山西 - 太原'},
+					 {latLng: [30.2084, 120.21201], name: '浙江 - 杭州 (2020 - )'},
+					 {latLng: [29.5949, 119.01221], name: '浙江 - 千岛湖'},
+					 {latLng: [31.30227, 120.63132], name: '江苏 - 苏州 (2016 - 2020)'},
+					 {latLng: [24.48405, 118.03394], name: '福建 - 厦门'},
+					 {latLng: [26.04769, 119.27345], name: '福建 - 福州'},
+					 {latLng: [27.75671, 118.03548], name: '福建 - 武夷山'},
+					 {latLng: [32.63142, 116.83359], name: '安徽 - 淮南'},
+					 {latLng: [31.82030, 117.22699], name: '安徽 - 合肥'},
+					 {latLng: [32.39463, 119.43157], name: '江苏 - 扬州'},
+					 {latLng: [30.74744, 120.78483], name: '浙江 - 嘉兴'},
+					 {latLng: [22.90026, 112.89262], name: '广东 - 佛山'},
+					 {latLng: [34.23053, 108.93425], name: '陕西 - 西安'}
+			],
 
-		        {latLng: [46.06, 122.06], name: '内蒙古 - 乌兰浩特'}
-		    ]
-		});
-	</script>
+			series: {
+                markers: [{
+                attribute: 'r',
+                scale: [4, 8],
+                values: freq
+                }]
+            },
+ 	});
+});
+</script>
+
 </html>
